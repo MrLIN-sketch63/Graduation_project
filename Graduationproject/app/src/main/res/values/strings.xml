@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Health care</string>
+    <string name="personinfo">个人信息</string>
+    <string name="account">账 号：</string>
+    <string name="logo">logo</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="send">Send</string>
+</resources>

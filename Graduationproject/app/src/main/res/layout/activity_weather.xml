@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity">
+
+    <ImageView
+        android:id="@+id/backgroundpic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"></ImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCountry"
+            android:fontFamily="sans-serif-medium"
+            android:text="City"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
+
+        <TextView
+            android:id="@+id/txtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Country"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgIcon" />
+
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="134dp"
+            android:src="@drawable/sunny"
+            app:layout_constraintBottom_toTopOf="@+id/LowestTemp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="20°"
+            android:textColor="#ffffff"
+            android:textSize="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCity" />
+
+        <TextView
+            android:id="@+id/LowestTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最低：22°"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/HighestTemp"
+            app:layout_constraintTop_toBottomOf="@+id/imgIcon" />
+
+        <TextView
+            android:id="@+id/HighestTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:text="最高：22°"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintEnd_toStartOf="@+id/LowestTemp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtValue" />
+
+        <ImageView
+            android:id="@+id/imgBodytemp"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/bodytemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+        <TextView
+            android:id="@+id/txtTitleBodytemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="體感"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintStart_toEndOf="@+id/imgBodytemp"
+            app:layout_constraintTop_toTopOf="@+id/imgBodytemp" />
+
+        <TextView
+            android:id="@+id/txtValueBodytemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18°"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txtTitleBodytemp"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleBodytemp" />
+
+        <ImageView
+            android:id="@+id/imgHumidity"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/humidity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBodytemp" />
+
+        <TextView
+            android:id="@+id/txtTitleHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="濕度"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgHumidity"
+            app:layout_constraintTop_toTopOf="@+id/imgHumidity" />
+
+        <TextView
+            android:id="@+id/txtValueHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16°"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txtTitleHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleHumidity" />
+
+        <ImageView
+            android:id="@+id/imgVision"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/vision"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgHumidity" />
+
+        <TextView
+            android:id="@+id/txtTitleVision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="能見度"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgVision"
+            app:layout_constraintTop_toTopOf="@+id/imgVision" />
+
+        <TextView
+            android:id="@+id/txtValueVision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30KM"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txtTitleVision"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleVision" />
+
+        <ImageView
+            android:id="@+id/imgWind"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/wind"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgVision" />
+
+        <TextView
+            android:id="@+id/txtTitleWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="風力"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgWind"
+            app:layout_constraintTop_toTopOf="@+id/imgWind" />
+
+        <TextView
+            android:id="@+id/txtValueWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1級"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="@+id/txtTitleWind"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleWind" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/drawable/tempimage2.xml" value="0.1425" />
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_dashboard.xml" value="0.26992753623188404" />
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_data_line_chart.xml" value="0.26992753623188404" />
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/layout/my_row.xml" value="0.2734375" />
+        <entry key="..\:/AndroidProject/Graduation project5.1/Graduationproject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.235" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/drawable/ic_age.xml" value="0.224" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/drawable/ic_home.xml" value="0.224" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/drawable/ic_person_navigate.xml" value="0.254" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_home.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_modify_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_user.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/layout/activity_userprofile_initialize.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/86298/Desktop/Graduation project5.1/Graduationproject/app/src/main/res/layout/main_nav_drawer.xml" value="0.26992753623188404" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
