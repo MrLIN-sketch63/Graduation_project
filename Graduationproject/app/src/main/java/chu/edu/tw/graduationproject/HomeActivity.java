@@ -39,6 +39,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
+import chu.edu.tw.graduationproject.ui.MainActivity;
+
 public class HomeActivity extends AppCompatActivity {
 
     private final int MAX_RECORDS = 10;
@@ -50,7 +52,6 @@ public class HomeActivity extends AppCompatActivity {
     String la,ln;
 
     private ImageButton btn;
-    private AlarmManager alarmManager;
 
     DBHelper myDB;
     DrawerLayout drawerLayout;
@@ -67,15 +68,6 @@ public class HomeActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
         myDB = new DBHelper(this);
-
-        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);//闹钟
-        btn = (ImageButton) findViewById(R.id.set_clock);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setClock(view);
-            }
-        });
 
         ImageButton emergency_btn = (ImageButton) findViewById(R.id.emergency_call);
         emergency_btn.setOnClickListener(new View.OnClickListener() {
@@ -120,28 +112,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    private void setClock(View view) {
-        Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
-
-        //弹出闹钟框
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                Calendar c = Calendar.getInstance();    //获取日期对象
-                c.set(Calendar.HOUR_OF_DAY, hourOfDay); //设置闹钟小时数
-                c.set(Calendar.MINUTE, minute); //设置闹钟分钟数
-                Intent intent = new Intent(HomeActivity.this, AlarmReceiver.class);
-                //创建pendingIntent
-                PendingIntent pendingIntent = PendingIntent.getBroadcast(HomeActivity.this,0X102, intent,0);
-                //设置闹钟
-                alarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
-                Toast.makeText(HomeActivity.this, "闹钟设置成功", Toast.LENGTH_SHORT).show();
-            }
-        },hour,minute,true);
-        timePickerDialog.show();
-    }
 
 
 
@@ -388,4 +358,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void set_alarm(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

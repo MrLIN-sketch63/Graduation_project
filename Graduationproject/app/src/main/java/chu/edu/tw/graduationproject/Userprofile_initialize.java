@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Userprofile_initialize extends AppCompatActivity {
 
-    EditText nickname, fullname, age, gender, emergency_phone, address;
+    EditText nickname, fullname, age, gender,email, emergency_phone1, emergency_phone2, emergency_phone3, address;
     Button save_data;
     DBHelper myDB;
 
@@ -27,7 +27,10 @@ public class Userprofile_initialize extends AppCompatActivity {
         fullname = findViewById(R.id.fullname);
         age = findViewById(R.id.age);
         gender = findViewById(R.id.gender);
-        emergency_phone = findViewById(R.id.emergency_phone);
+        email = findViewById(R.id.email);
+        emergency_phone1 = findViewById(R.id.emergency_phone1);
+        emergency_phone2 = findViewById(R.id.emergency_phone2);
+        emergency_phone3 = findViewById(R.id.emergency_phone3);
         address = findViewById(R.id.address);
 
         save_data = findViewById(R.id.btn_save_data);
@@ -40,10 +43,14 @@ public class Userprofile_initialize extends AppCompatActivity {
                 String fullnameTXT = fullname.getText().toString();
                 String ageTXT = age.getText().toString();
                 String genderTXT = gender.getText().toString();
-                String emergency_phoneTXT = emergency_phone.getText().toString();
+                String emailTXT = email.getText().toString();
+                String emergency_phone1TXT = emergency_phone1.getText().toString();
+                String emergency_phone2TXT = emergency_phone2.getText().toString();
+                String emergency_phone3TXT = emergency_phone3.getText().toString();
                 String addressTXT = address.getText().toString();
 
-                Boolean checkInsertData = myDB.insert_userprofile_Data(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emergency_phoneTXT, addressTXT);
+                Boolean checkInsertData = myDB.insert_userprofile_Data(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,
+                        emergency_phone1TXT, emergency_phone2TXT,emergency_phone3TXT, addressTXT);
                 if(checkInsertData == true){
                     Toast.makeText(Userprofile_initialize.this, "Insert Successful", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Userprofile_initialize.this, LoginActivity.class);

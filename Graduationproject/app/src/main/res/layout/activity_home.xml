@@ -113,7 +113,8 @@
                         android:id="@+id/set_clock"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/medicine_clock"/>
+                        android:background="@drawable/medicine_clock"
+                        android:onClick="set_alarm" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

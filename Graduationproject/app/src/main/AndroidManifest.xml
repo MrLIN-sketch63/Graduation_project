@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +24,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GraduationProject">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.AlarmLandingPageActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.AddEditAlarmActivity"
+            android:exported="false" />
         <activity
             android:name=".Data_lineChart"
             android:exported="false" />
@@ -59,9 +73,6 @@
             android:name=".WeatherActivity"
             android:exported="false" />
         <activity
-            android:name=".AlarmActivity"
-            android:exported="false" />
-        <activity
             android:name=".MapsActivity"
             android:exported="true" />
 
@@ -93,9 +104,19 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name=".AlarmReceiver"
-            android:process=":remote" />
+
+        <service android:name=".service.LoadAlarmsService" />
+
+        <receiver android:name=".service.LoadAlarmsReceiver" />
+
+        <receiver android:name=".service.AlarmReceiver" />
+
+        <receiver android:name=".service.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

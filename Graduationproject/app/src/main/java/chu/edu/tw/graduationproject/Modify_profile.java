@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 public class Modify_profile extends AppCompatActivity {
     TextView nickname;
-    EditText fullname, age, gender, emergency_phone, address;
+    EditText fullname, age, gender, email, emergency_phone1, emergency_phone2, emergency_phone3, address;
     Button save;
-    String nickname1, fullname1, age1, gender1, emergency_phone1, address1;
+    String nickname_edit, fullname_edit, age_edit, gender_edit, email_edit, emergency_phone1_edit, emergency_phone2_edit, emergency_phone3_edit, address_edit;
     DBHelper myDB;
 
 
@@ -30,7 +30,10 @@ public class Modify_profile extends AppCompatActivity {
         fullname = findViewById(R.id.fullname);
         age = findViewById(R.id.age);
         gender = findViewById(R.id.gender);
-        emergency_phone = findViewById(R.id.emergency_phone);
+        email = findViewById(R.id.email);
+        emergency_phone1 = findViewById(R.id.emergency_phone1);
+        emergency_phone2 = findViewById(R.id.emergency_phone2);
+        emergency_phone3 = findViewById(R.id.emergency_phone3);
         address = findViewById(R.id.address);
 
         save = findViewById(R.id.btn_save);
@@ -45,33 +48,46 @@ public class Modify_profile extends AppCompatActivity {
                 String fullnameTXT = fullname.getText().toString();
                 String ageTXT = age.getText().toString();
                 String genderTXT = gender.getText().toString();
-                String emergency_phoneTXT = emergency_phone.getText().toString();
+                String emailTXT = email.getText().toString();
+                String emergency_phone1TXT = emergency_phone1.getText().toString();
+                String emergency_phone2TXT = emergency_phone2.getText().toString();
+                String emergency_phone3TXT = emergency_phone3.getText().toString();
                 String addressTXT = address.getText().toString();
-                Boolean checkUpdateData = myDB.UpdateData(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emergency_phoneTXT, addressTXT);
+                Boolean checkUpdateData = myDB.UpdateData(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,
+                        emergency_phone1TXT, emergency_phone2TXT, emergency_phone3TXT, addressTXT);
                 if(checkUpdateData == true){
                     Toast.makeText(Modify_profile.this, "Update Successful", Toast.LENGTH_SHORT).show();
 
                     Cursor c = myDB.getdata();
                     if(c.moveToFirst()) {
-                        String str1, str2, str3, str4, str5, str6;
+                        String str1, str2, str3, str4, str5, str6, str7, str8, str9;
                         str1 = c.getString(0);
                         str2 = c.getString(1);
                         str3 = c.getString(2);
                         str4 = c.getString(3);
                         str5 = c.getString(4);
                         str6 = c.getString(5);
+                        str7 = c.getString(6);
+                        str8 = c.getString(7);
+                        str9 = c.getString(8);
                         TextView textView1 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_1);
                         TextView textView2 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_2);
                         TextView textView3 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_3);
                         TextView textView4 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_4);
                         TextView textView5 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_5);
                         TextView textView6 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_6);
+                        TextView textView7 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_7);
+                        TextView textView8 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_8);
+                        TextView textView9 = LayoutInflater.from(Modify_profile.this).inflate(R.layout.activity_user, null).findViewById(R.id.Tx_9);
                         textView1.setText(str1);
                         textView2.setText(str2);
                         textView3.setText(str3);
                         textView4.setText(str4);
                         textView5.setText(str5);
                         textView6.setText(str6);
+                        textView7.setText(str7);
+                        textView8.setText(str8);
+                        textView9.setText(str9);
                     }
                     Intent i = new Intent(Modify_profile.this, User.class);
                     startActivity(i);
@@ -112,7 +128,6 @@ public class Modify_profile extends AppCompatActivity {
 
 
 
-
     public void btn_edit(View view) {
         Intent i = new Intent(this, User.class);
         startActivity(i);
@@ -120,22 +135,29 @@ public class Modify_profile extends AppCompatActivity {
 
     void getAndSetUserData(){
         if(getIntent().hasExtra("nickname") && getIntent().hasExtra("fullname") && getIntent().hasExtra("age")
-                && getIntent().hasExtra("gender") && getIntent().hasExtra("emergency") && getIntent().hasExtra("address")) {
+                && getIntent().hasExtra("gender") && getIntent().hasExtra("email") && getIntent().hasExtra("emergency1")
+                && getIntent().hasExtra("emergency2") && getIntent().hasExtra("emergency3") && getIntent().hasExtra("address")) {
             //getting data from intent
-            nickname1 = getIntent().getStringExtra("nickname");
-            fullname1 = getIntent().getStringExtra("fullname");
-            age1 = getIntent().getStringExtra("age");
-            gender1 = getIntent().getStringExtra("gender");
-            emergency_phone1 = getIntent().getStringExtra("emergency");
-            address1 = getIntent().getStringExtra("address");
+            nickname_edit = getIntent().getStringExtra("nickname");
+            fullname_edit = getIntent().getStringExtra("fullname");
+            age_edit = getIntent().getStringExtra("age");
+            gender_edit = getIntent().getStringExtra("gender");
+            email_edit = getIntent().getStringExtra("email");
+            emergency_phone1_edit = getIntent().getStringExtra("emergency1");
+            emergency_phone2_edit = getIntent().getStringExtra("emergency2");
+            emergency_phone3_edit = getIntent().getStringExtra("emergency3");
+            address_edit = getIntent().getStringExtra("address");
 
             //setting Intent data
-            nickname.setText(nickname1);
-            fullname.setText(fullname1);
-            age.setText(age1);
-            gender.setText(gender1);
-            emergency_phone.setText(emergency_phone1);
-            address.setText(address1);
+            nickname.setText(nickname_edit);
+            fullname.setText(fullname_edit);
+            age.setText(age_edit);
+            gender.setText(gender_edit);
+            email.setText(email_edit);
+            emergency_phone1.setText(emergency_phone1_edit);
+            emergency_phone2.setText(emergency_phone2_edit);
+            emergency_phone3.setText(emergency_phone3_edit);
+            address.setText(address_edit);
 
         }
         else {
