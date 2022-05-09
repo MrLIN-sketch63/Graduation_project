@@ -13,11 +13,7 @@ import androidx.work.WorkManager;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
-import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -28,12 +24,10 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -50,8 +44,6 @@ public class HomeActivity extends AppCompatActivity {
     private final double[] Lats = new double[MAX_RECORDS];
     private final double[] Lngs = new double[MAX_RECORDS];
     String la,ln;
-
-    private ImageButton btn;
 
     DBHelper myDB;
     DrawerLayout drawerLayout;
@@ -183,7 +175,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
    private void updatePosition() {
-        TextView output, list;
+//        TextView output, list;
 //        String str = "最近個人行蹤的座標清單:\n";
 //        output = (TextView) findViewById(R.id.lblOutput);
 //        list = (TextView) findViewById(R.id.lblList);
@@ -254,7 +246,7 @@ public class HomeActivity extends AppCompatActivity {
             //Toast.makeText(this, "距離: " + distance + "公尺",Toast.LENGTH_SHORT).show();
             Log.d("Track Location", "distance: " + distance);
             // 檢查距離是否小於20公尺, 小於不用存
-            if (distance < 20.0) isSave = false;
+            if (distance < 200) isSave = false;
         }
         if (isSave) { // 記錄座標
             Lats[index] = lat;
