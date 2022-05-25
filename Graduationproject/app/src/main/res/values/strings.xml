@@ -1,14 +1,15 @@
 <resources>
-    <string name="app_name">Health care</string>
-    <string name="personinfo">个人信息</string>
-    <string name="account">账 号：</string>
+    <string name="app_name">Health Care</string>
+    <string name="personinfo">Personal Info</string>
+    <string name="account">UserName：</string>
     <string name="logo">logo</string>
     <string name="home">Home</string>
     <string name="logout">Logout</string>
     <string name="send">Send</string>
 
+
     <!-- Main Activity/Fragment -->
-    <string name="empty_view_text">Press the Floating Action Button to add an alarm!</string>
+    <string name="empty_view_text">Press the Button to add an alarm!</string>
 
     <!-- Edit Alarm Activity/Fragment -->
     <string name="time">Time</string>
@@ -16,7 +17,7 @@
     <string name="days">Days</string>
     <string name="edit_alarm">Edit Alarm</string>
     <string name="add_alarm">Add Alarm</string>
-    <string name="add_label_hint">Add a label!</string>
+    <string name="add_label_hint">Enter Medicine</string>
     <string name="update_complete">Changes Saved</string>
     <string name="update_failed">Update Failed</string>
     <string name="delete_complete">Alarm Deleted</string>
@@ -45,5 +46,76 @@
 
     <!-- Notification -->
     <string name="channel_name">Health care</string>
-
+    <string name="MedicineName">Medicine Name</string>
+    <string name="CurrentTime">Current Time</string>
+    <string name="SystolicPressure">Systolic pressure：</string>
+    <string name="DiastolicPressure">DiastolicPressure ：</string>
+    <string name="HeartBeat">HeartBeat(bpm) ：</string>
+    <string name="GlucoseAC">Glucose(AC)：</string>
+    <string name="GlucosePC">Glucose(PC)：</string>
+    <string name="add">add</string>
+    <string name="welcome">Welcome to Health Care</string>
+    <string name="welcome_nav">Health Care</string>
+    <string name="map">Map</string>
+    <string name="Medicine">Medicine Clock</string>
+    <string name="Weather">Weather</string>
+    <string name="Emergency">Emergency Call</string>
+    <string name="Picture">Photo Creator</string>
+    <string name="health">Health Record</string>
+    <string name="select">Select Photo</string>
+    <string name="screenshot">screenshot</string>
+    <string name="black">B</string>
+    <string name="white">W</string>
+    <string name="Edit">EDIT TEXT HERE</string>
+    <string name="UserName">Username</string>
+    <string name="Password">Password</string>
+    <string name="login">Login</string>
+    <string name="Remember">Remember Password</string>
+    <string name="AutoLogin">AutoLogin</string>
+    <string name="Register">Register</string>
+    <string name="NickName">Nickname</string>
+    <string name="FullName">Full Name</string>
+    <string name="Age">Age</string>
+    <string name="Gender">Gender</string>
+    <string name="Email">Email</string>
+    <string name="Emergencyphone1">Emergency phone1</string>
+    <string name="Emergencyphone2">Emergency phone2</string>
+    <string name="Emergencyphone3">Emergency phone3</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="Address">Address</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="save">save</string>
+    <string name="ApparentTemp">Feels Like</string>
+    <string name="humidity">Humidity</string>
+    <string name="HighTemp">Hi :</string>
+    <string name="LowTemp">Lo :</string>
+    <string name="visibility">Visibility</string>
+    <string name="Wind">Wind</string>
+    <string name="lvl1">Level 1 (Light Air)</string>
+    <string name="lvl2">Level 2 (Light Breeze)</string>
+    <string name="lvl3">Level 3 (Gentle Breeze)</string>
+    <string name="lvl4">Level 4 (Moderate Breeze)</string>
+    <string name="lvl5">Level 5 (Fresh Breeze)</string>
+    <string name="lvl6">Level 6 (Strong Breeze)</string>
+    <string name="lvl7">Level 7 (Near Gale)</string>
+    <string name="lvl8">Level 8 (Gale)</string>
+    <string name="lvl9">Level 9 (Strong Gale)</string>
+    <string name="lvl10">Level 10 (Whole Gale)</string>
+    <string name="lvl11">Level 11 (Storm Force)</string>
+    <string name="lvl12">Level 12 (Hurricane Force)</string>
+    <string name="lvl0">Level 0 (Calm)</string>
+    <string name="user">Profile</string>
+    <string name="exit">Exit</string>
+    <string name="social">Social</string>
+    <string name="share">Share</string>
+    <string name="before">Before Eating</string>
+    <string name="after">After Eating</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="context">Context Us</string>
+    <string name="today">Today temperature ：</string>
+    <string name="logout_content">Are you sure you want to exit? </string>
+    <string name="logout_title">Logout </string>
+    <string name="about_us">About us </string>
+    <string name="privacy">Privacy </string>
 </resources>

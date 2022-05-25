@@ -65,6 +65,8 @@ public class User extends AppCompatActivity {
         HomeActivity.exit(this);
     }
 
+    public void ClickAbout_us(View view){ HomeActivity.redirectActivity(this, About_us.class); }
+
     @Override
     protected void onPause() {
         super.onPause();

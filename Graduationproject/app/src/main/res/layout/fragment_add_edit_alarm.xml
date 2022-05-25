@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:text="Medicine Name" />
+            android:text="@string/MedicineName" />
 
         <View
             android:layout_width="match_parent"
@@ -85,7 +85,7 @@
             android:maxLength="15"
             android:textColor="@color/secondary_text"
             android:textStyle="italic"
-            android:hint="Enter medicine"
+            android:hint="@string/add_label_hint"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <TextView
@@ -94,7 +94,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
             android:text="@string/days"
-            tools:text="Days"/>
+            />
 
         <View
             android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/monday"
-                tools:text="Monday"
+
                 />
 
             <CheckBox
@@ -129,7 +129,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/tuesday"
-                tools:text="Tuesday"
+
                 />
 
             <CheckBox
@@ -145,7 +145,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/wednesday"
-                tools:text="Wednesday"
+
                 />
 
             <CheckBox
@@ -161,7 +161,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/thursday"
-                tools:text="Thursday"
+
                 />
 
             <CheckBox
@@ -177,7 +177,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/friday"
-                tools:text="Friday"
+
                 />
 
             <CheckBox
@@ -193,7 +193,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/saturday"
-                tools:text="Saturday"
+
                 />
 
             <CheckBox
@@ -209,7 +209,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/sunday"
-                tools:text="Sunday"
+
                 />
 
             <CheckBox

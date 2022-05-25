@@ -14,9 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:alpha="0.3"
-        app:srcCompat="@drawable/ic_alarm_white"
-        android:scaleType="fitCenter"/>
+        android:background="@drawable/alarm_page_test" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,20 +26,16 @@
         <Button
             android:id="@+id/load_main_activity_btn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="@string/launch_main_activity"
-            tools:text="Load Main Activity"
-            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+            android:text="Load Main Activity" />
 
         <Button
             android:id="@+id/dismiss_btn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="@string/dismiss"
-            tools:text="Dismiss"
-            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored" />
+            android:text="Dismiss"/>
 
     </LinearLayout>
 

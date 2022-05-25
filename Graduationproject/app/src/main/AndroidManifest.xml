@@ -24,15 +24,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GraduationProject">
-
+        <activity
+            android:name=".About_us"
+            android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.AlarmLandingPageActivity"
             android:theme="@style/AlertLandingPageTheme" />
-
         <activity
             android:name=".ui.AddEditAlarmActivity"
             android:exported="false" />
@@ -108,15 +108,15 @@
         <service android:name=".service.LoadAlarmsService" />
 
         <receiver android:name=".service.LoadAlarmsReceiver" />
-
         <receiver android:name=".service.AlarmReceiver" />
-
-        <receiver android:name=".service.BootReceiver" android:enabled="true" android:exported="true">
+        <receiver
+            android:name=".service.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

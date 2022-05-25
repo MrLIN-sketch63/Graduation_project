@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_marginTop="50dp"
-        android:hint="Username"
+        android:hint="@string/UserName"
         android:textSize="25dp" />
 
 
@@ -30,10 +30,10 @@
         android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Password"
-        android:layout_marginTop="50dp"
         android:layout_below="@id/usernameLogin"
-        android:textSize="25dp"/>
+        android:layout_marginTop="50dp"
+        android:hint="@string/Password"
+        android:textSize="25dp" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -42,7 +42,7 @@
         android:layout_below="@id/passwordLogin"
         android:layout_marginTop="25dp"
         android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="Login"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:textSize="25sp" />
 
@@ -53,7 +53,7 @@
         android:layout_below="@id/Auto_login"
         android:layout_marginTop="15dp"
         android:backgroundTint="@android:color/holo_blue_light"
-        android:text="Register"
+        android:text="@string/Register"
         android:textAllCaps="false"
         android:textSize="25sp" />
 
@@ -63,16 +63,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLogin"
         android:layout_marginTop="5dp"
-        android:text="RememberPassword"
+        android:text="@string/Remember"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="20dp" />
+
     <CheckBox
         android:id="@+id/Auto_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/RememberPass"
         android:layout_marginTop="5dp"
-        android:text="AutoLogin"
+        android:text="@string/AutoLogin"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="20dp" />
 

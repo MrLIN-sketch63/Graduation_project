@@ -20,17 +20,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
-        android:hint="Username"
+        android:hint="@string/UserName"
         android:textSize="25dp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_below="@+id/username"
         android:layout_marginTop="30dp"
-        android:textSize="25dp"
-        android:layout_below="@+id/username"/>
+        android:hint="@string/Password"
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/repassword"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_marginTop="30dp"
-        android:hint="Renter Password"
+        android:hint="@string/confirm"
         android:textSize="25dp" />
 
     <Button
@@ -48,7 +48,7 @@
         android:layout_below="@+id/repassword"
         android:layout_marginTop="20dp"
         android:backgroundTint="@android:color/holo_blue_light"
-        android:text="Register"
+        android:text="@string/Register"
         android:textAllCaps="false"
         android:textSize="25dp" />
 

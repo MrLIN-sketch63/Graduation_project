@@ -37,7 +37,7 @@ import chu.edu.tw.graduationproject.ui.MainActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private final int MAX_RECORDS = 10;
+    private final int MAX_RECORDS = 50;
     private LocationManager manager;
     private Location currentLocation;
     private int index = 0, count = 0;
@@ -121,14 +121,12 @@ public class HomeActivity extends AppCompatActivity {
                 return;
             }
             currentLocation = manager.getLastKnownLocation(best);
-            manager.requestLocationUpdates(best, minTime,
-                    minDistance, listener);
+            manager.requestLocationUpdates(best, minTime, minDistance, listener);
         } else { // 取得快取的最後位置,如果有的話
             currentLocation = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    minTime, minDistance, listener);
+            manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, listener);
         }
-        //updatePosition(); // 更新位置
+        updatePosition(); // 更新位置
     }
 
     @Override
@@ -318,11 +316,13 @@ public class HomeActivity extends AppCompatActivity {
         exit(this);
     }
 
+    public void ClickAbout_us(View view){ HomeActivity.redirectActivity(this, About_us.class); }
+
     public static void exit(Activity activity) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Logout");
-        builder.setMessage("Are you sure you want to exit ?");
-        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.logout_title);
+        builder.setMessage(R.string.logout_content);
+        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 activity.finishAffinity();
@@ -330,7 +330,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

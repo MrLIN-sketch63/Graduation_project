@@ -53,6 +53,7 @@ public class Update_health_data extends AppCompatActivity {
                     Toast.makeText(Update_health_data.this, "Update Successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Update_health_data.this, Health_data_record.class);
                     startActivity(intent);
+                    finish();
                 }
                 else{
                     Toast.makeText(Update_health_data.this, "Update Failed!", Toast.LENGTH_SHORT).show();

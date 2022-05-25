@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="current time"
+                android:text="@string/CurrentTime"
                 android:textSize="25sp" />
         </LinearLayout>
 
@@ -111,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Before Eating"
+                    android:text="@string/before"
                     android:textSize="20dp"/>
 
                 <TextView
@@ -140,7 +140,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="After Eating"
+                    android:text="@string/after"
                     android:textSize="20dp"/>
 
                 <TextView

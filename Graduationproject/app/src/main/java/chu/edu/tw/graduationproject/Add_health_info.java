@@ -55,6 +55,7 @@ public class Add_health_info extends AppCompatActivity {
 
                 Intent intent = new Intent(Add_health_info.this, Health_data_record.class);
                 startActivity(intent);
+                finish();
             }
         });
 

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:text="Current time"
+            android:text="@string/CurrentTime"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -34,8 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
-            android:text="收缩压:"
+            android:textSize="25dp"
+            android:text="@string/SystolicPressure"
             android:textStyle="bold"/>
 
         <EditText
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -59,8 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
-            android:text="舒张压:"
+            android:textSize="25dp"
+            android:text="@string/DiastolicPressure"
             android:textStyle="bold"/>
 
         <EditText
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -84,8 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
-            android:text="心跳(BPM):"
+            android:textSize="25dp"
+            android:text="@string/HeartBeat"
             android:textStyle="bold"/>
 
         <EditText
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -109,8 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
-            android:text="饭前血糖:"
+            android:textSize="25dp"
+            android:text="@string/GlucoseAC"
             android:textStyle="bold"/>
 
         <EditText
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="40dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -134,8 +134,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
-            android:text="饭后血糖:"
+            android:textSize="25dp"
+            android:text="@string/GlucosePC"
             android:textStyle="bold"/>
 
         <EditText
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn"
         android:layout_gravity="center"
-        android:text="Add"
+        android:text="@string/add"
         android:textStyle="bold"
         android:textSize="30dp"
         android:layout_marginTop="30dp"/>

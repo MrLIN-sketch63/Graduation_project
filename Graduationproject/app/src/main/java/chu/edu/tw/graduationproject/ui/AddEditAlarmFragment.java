@@ -163,8 +163,8 @@ public class AddEditAlarmFragment extends Fragment {
         final AlertDialog.Builder builder =
                 new AlertDialog.Builder(getContext());
         builder.setTitle(R.string.delete_dialog_title);
-        builder.setMessage("Are you sure to delete the alarm? ");
-        builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.delete_dialog_content);
+                builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
