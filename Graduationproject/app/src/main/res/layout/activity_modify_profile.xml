@@ -67,7 +67,7 @@
                     android:id="@+id/nickname"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
@@ -106,9 +106,9 @@
 
                 <EditText
                     android:id="@+id/fullname"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -146,9 +146,9 @@
 
                 <EditText
                     android:id="@+id/age"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -188,9 +188,9 @@
 
                 <EditText
                     android:id="@+id/gender"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="125dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
 
@@ -230,13 +230,14 @@
 
                 <EditText
                     android:id="@+id/email"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="140dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
 
             </LinearLayout>
+
 
             <View
                 android:layout_width="match_parent"
@@ -246,7 +247,45 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="20dp">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_address"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Address"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -273,9 +312,9 @@
 
                 <EditText
                     android:id="@+id/emergency_phone1"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -313,9 +352,9 @@
 
                 <EditText
                     android:id="@+id/emergency_phone2"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -353,9 +392,9 @@
 
                 <EditText
                     android:id="@+id/emergency_phone3"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -368,45 +407,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:layout_marginTop="20dp">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/ic_address"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Address"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:layout_marginLeft="5dp"/>
-
-                <EditText
-                    android:id="@+id/address"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="120dp"
-                    android:textColor="@android:color/holo_blue_light"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

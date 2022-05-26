@@ -74,7 +74,7 @@
                     android:id="@+id/Tx_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="Jack"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -114,7 +114,7 @@
                     android:id="@+id/Tx_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="Steve"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -154,7 +154,7 @@
                     android:id="@+id/Tx_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="25"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -195,7 +195,7 @@
                     android:id="@+id/Tx_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="male"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -237,7 +237,7 @@
                     android:id="@+id/Tx_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="123456@gmail.com"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -279,7 +279,7 @@
                     android:id="@+id/Tx_9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="WuFu Road"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -319,7 +319,7 @@
                     android:id="@+id/Tx_6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="123456"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -359,7 +359,7 @@
                     android:id="@+id/Tx_7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="123456"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
@@ -399,7 +399,7 @@
                     android:id="@+id/Tx_8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="123456"
                     android:textColor="@android:color/holo_blue_light"
                     android:textSize="18dp" />
