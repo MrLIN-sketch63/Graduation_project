@@ -120,7 +120,4 @@
     <string name="privacy">Privacy </string>
     <string name="required">Required </string>
     <string name="optional">Optional </string>
-    <string name="target_enter">The user is entering the fenced area </string>
-    <string name="target_in">The user is in the fence area now </string>
-    <string name="target_left">The user has left the fenced area </string>
 </resources>

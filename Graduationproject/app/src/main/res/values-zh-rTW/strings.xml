@@ -108,7 +108,4 @@
     <string name="welcome_nav">健康看護</string>
     <string name="required">必填</string>
     <string name="optional">選填</string>
-    <string name="target_enter">使用者進入柵欄區域</string>
-    <string name="target_in">使用者正在柵欄區域中</string>
-    <string name="target_left">使用者離開柵欄區域</string>
 </resources>

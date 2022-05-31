@@ -12,6 +12,7 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingEvent;
 
 import java.util.List;
+import java.util.Locale;
 
 public class GeofenceBroadcastReceiver extends BroadcastReceiver{
 
@@ -42,31 +43,64 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver{
 
         switch (transitionType) {
             case Geofence.GEOFENCE_TRANSITION_ENTER:
-                String message = String.valueOf(R.string.target_enter);
-                Cursor cursor = db.getdata();
-                if(cursor.moveToFirst()) {
-                    String number = cursor.getString(4);
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(number, null, message, null, null);
+                if(Locale.getDefault().getLanguage() == "zh"){
+                    String message = "使用者進入柵欄區域";
+                    Cursor cursor = db.getdata();
+                    if(cursor.moveToFirst()) {
+                        String number = cursor.getString(6);
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(number, null, message, null, null);
+                    }
+                    notificationHelper.sendHighPriorityNotification("使用者進入柵欄區域", "", MapsActivity.class);
+                    break;
                 }
-                notificationHelper.sendHighPriorityNotification(String.valueOf(R.string.target_enter), "", MapsActivity.class);
-                break;
+                else{
+                    String message = "The user is entering the fenced area" ;
+                    Cursor cursor = db.getdata();
+                    if(cursor.moveToFirst()) {
+                        String number = cursor.getString(6);
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(number, null, message, null, null);
+                    }
+                    notificationHelper.sendHighPriorityNotification("The user is entering the fenced area", "", MapsActivity.class);
+                    break;
+                }
+
+
 
             case Geofence.GEOFENCE_TRANSITION_DWELL:
-                notificationHelper.sendHighPriorityNotification(String.valueOf(R.string.target_in), "", MapsActivity.class);
+                if(Locale.getDefault().getLanguage() == "zh"){
+                    notificationHelper.sendHighPriorityNotification("使用者正在柵欄區域中", "", MapsActivity.class);
+                }
+                else{
+                    notificationHelper.sendHighPriorityNotification("The user is in the fence area now", "", MapsActivity.class);
+                }
+
                 break;
 
             case Geofence.GEOFENCE_TRANSITION_EXIT:
-                String message1 = String.valueOf(R.string.target_left);
-                Cursor cursor1 = db.getdata();
-                if(cursor1.moveToFirst()) {
-                    String number = cursor1.getString(4);
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(number, null, message1, null, null);
+                if(Locale.getDefault().getLanguage() == "zh"){
+                    String message1 = "使用者離開柵欄區域";
+                    Cursor cursor1 = db.getdata();
+                    if(cursor1.moveToFirst()) {
+                        String number = cursor1.getString(6);
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(number, null, message1, null, null);
+                    }
+                    notificationHelper.sendHighPriorityNotification("使用者離開柵欄區域", "", MapsActivity.class);
+                    break;
                 }
-                notificationHelper.sendHighPriorityNotification(String.valueOf(R.string.target_left), "", MapsActivity.class);
-                break;
-
+                else{
+                    String message1 = "The user has left the fenced area";
+                    Cursor cursor1 = db.getdata();
+                    if(cursor1.moveToFirst()) {
+                        String number = cursor1.getString(6);
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(number, null, message1, null, null);
+                    }
+                    notificationHelper.sendHighPriorityNotification("The user has left the fenced area", "", MapsActivity.class);
+                    break;
+                }
 
 
 
