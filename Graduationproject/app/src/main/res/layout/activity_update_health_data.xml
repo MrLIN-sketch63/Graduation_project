@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/add_info_bg"
     tools:context=".Update_health_data">
 
 
@@ -35,17 +36,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
             android:text="@string/SystolicPressure"
-            android:textStyle="bold"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/low_pressure_input2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -60,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
+            android:textSize="25dp"
             android:text="@string/DiastolicPressure"
             android:textStyle="bold"/>
 
@@ -69,7 +70,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/black"
             android:textSize="35dp" />
 
     </LinearLayout>
@@ -85,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
+            android:textSize="25dp"
             android:text="@string/HeartBeat"
             android:textStyle="bold"/>
 
@@ -94,8 +95,8 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -110,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
+            android:textSize="25dp"
             android:text="@string/GlucoseAC"
             android:textStyle="bold"/>
 
@@ -119,8 +120,8 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="40dp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -135,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="35dp"
+            android:textSize="25dp"
             android:text="@string/GlucosePC"
             android:textStyle="bold"/>
 
@@ -144,8 +145,8 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="35dp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
     </LinearLayout>
 

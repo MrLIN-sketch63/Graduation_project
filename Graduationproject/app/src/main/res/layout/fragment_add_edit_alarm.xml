@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:scrollbarStyle="outsideOverlay">
+    android:scrollbarStyle="outsideOverlay"
+    android:background="@color/light_bLue">
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:background="@drawable/divider" />
+            android:background="@color/dark_blue" />
 
         <TimePicker
             android:id="@+id/edit_alarm_time_picker"
@@ -75,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:background="@drawable/divider" />
+            android:background="@color/dark_blue" />
 
         <EditText
             android:id="@+id/edit_alarm_label"
@@ -100,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/list_padding_vertical_small"
-            android:background="@drawable/divider" />
+            android:background="@color/dark_blue" />
 
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
@@ -113,15 +114,15 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/monday"
-
-                />
+                android:textColor="@color/black" />
 
             <CheckBox
                 android:id="@+id/edit_alarm_mon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,15 +130,15 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/tuesday"
-
-                />
+                android:textColor="@color/black" />
 
             <CheckBox
                 android:id="@+id/edit_alarm_tues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,7 +146,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/wednesday"
-
+                android:textColor="@color/black"
                 />
 
             <CheckBox
@@ -153,7 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,7 +163,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/thursday"
-
+                android:textColor="@color/black"
                 />
 
             <CheckBox
@@ -169,7 +171,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -177,7 +180,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/friday"
-
+                android:textColor="@color/black"
                 />
 
             <CheckBox
@@ -185,7 +188,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -193,7 +197,7 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/saturday"
-
+                android:textColor="@color/black"
                 />
 
             <CheckBox
@@ -201,7 +205,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -209,15 +214,15 @@
                 app:layout_gravity="center_vertical|fill_horizontal"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
                 android:text="@string/sunday"
-
-                />
+                android:textColor="@color/black" />
 
             <CheckBox
                 android:id="@+id/edit_alarm_sun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/list_padding_vertical_small"
-                app:layout_gravity="center_vertical"/>
+                app:layout_gravity="center_vertical"
+                android:buttonTint="@color/black"/>
 
 
         </androidx.gridlayout.widget.GridLayout>

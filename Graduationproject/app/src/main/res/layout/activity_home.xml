@@ -46,8 +46,8 @@
                 android:layout_height="75dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/profile_photo"
-                android:contentDescription="TODO" />
+                android:contentDescription="TODO"
+                android:src="@drawable/profile_photo" />
 
         </RelativeLayout>
 

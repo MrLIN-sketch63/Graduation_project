@@ -50,23 +50,23 @@ public class RegisterActivity extends AppCompatActivity {
                             Boolean reResult = myDB.insertData(user,pass);
                             if(reResult == true)
                             {
-                                Toast.makeText(RegisterActivity.this, "Registration Successful.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), Userprofile_initialize.class);
                                 startActivity(intent);
                             }
                             else
                             {
-                                Toast.makeText(RegisterActivity.this, "Registration Failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, R.string.register_fail, Toast.LENGTH_SHORT).show();
                             }
                         }
                         else
                         {
-                            Toast.makeText(RegisterActivity.this, "User already Exists.\n Please Sign In.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, R.string.user_exit, Toast.LENGTH_SHORT).show();
                         }
                     }
                     else
                     {
-                        Toast.makeText(RegisterActivity.this, "Password not Matching", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, R.string.password_match, Toast.LENGTH_SHORT).show();
                     }
                 }
             }

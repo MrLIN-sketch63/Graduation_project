@@ -40,7 +40,7 @@ public class WeatherBroadcast extends BroadcastReceiver {
                 .setContentIntent(pendingIntent)
                 .setSmallIcon(R.drawable.sunny)
                 .setLargeIcon(bitmap)
-                .setContentText(R.string.weather_content + temp + "℃")
+                .setContentText(R.string.today + temp + "℃")
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setAutoCancel(true);
 

@@ -127,7 +127,6 @@ public class AddEditAlarmFragment extends Fragment {
     }
 
     private void save() {
-
         final Alarm alarm = getAlarm();
 
         final Calendar time = Calendar.getInstance();

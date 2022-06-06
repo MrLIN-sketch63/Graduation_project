@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pass = password.getText().toString();
 
                 if (user.equals("") || pass.equals("")) {
-                    Toast.makeText(LoginActivity.this, "Please enter the Credentials", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.login_ps_success, Toast.LENGTH_SHORT).show();
                 } else {
                     Boolean result = myDB.checkusernamePassword(user, pass);
                     if (result == true) {
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, R.string.login_ps_fail, Toast.LENGTH_SHORT).show();
                     }
                 }
             }

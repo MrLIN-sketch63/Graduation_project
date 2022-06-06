@@ -52,12 +52,12 @@ public class Userprofile_initialize extends AppCompatActivity {
                 Boolean checkInsertData = myDB.insert_userprofile_Data(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,
                         emergency_phone1TXT, emergency_phone2TXT,emergency_phone3TXT, addressTXT);
                 if(checkInsertData == true){
-                    Toast.makeText(Userprofile_initialize.this, "Insert Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Userprofile_initialize.this, R.string.insert_success, Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Userprofile_initialize.this, LoginActivity.class);
                     startActivity(i);
                 }
                 else {
-                    Toast.makeText(Userprofile_initialize.this, "Insert Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Userprofile_initialize.this, R.string.insert_fail, Toast.LENGTH_SHORT).show();
                 }
             }
         });

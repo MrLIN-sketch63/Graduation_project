@@ -37,13 +37,17 @@ import chu.edu.tw.graduationproject.ui.MainActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private final int MAX_RECORDS = 50;
+    private final int MAX_RECORDS = 10;
     private LocationManager manager;
     private Location currentLocation;
     private int index = 0, count = 0;
     private final double[] Lats = new double[MAX_RECORDS];
     private final double[] Lngs = new double[MAX_RECORDS];
     String la,ln;
+    int i = 0;
+    TextView txttest;
+
+    private ImageButton btn;
 
     DBHelper myDB;
     DrawerLayout drawerLayout;
@@ -54,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
+        i = 0;
 
         // 取得系統服務的LocationManager物件
         manager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -67,10 +72,25 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Cursor cursor =  myDB.getdata();
                 if(cursor.moveToFirst()) {
-                    String emergency_num = cursor.getString(4);
-                    emergency_call(emergency_num);
+                    String emergency_num = cursor.getString(5);
+                    String emergency_num1 = cursor.getString(6);
+                    String emergency_num2 = cursor.getString(7);
+                    txttest = findViewById(R.id.textView234);
+                    txttest.setText(emergency_num2);
+                    if(i == 0) {
+                        emergency_call(emergency_num);
+                        if (emergency_num1.length() != 0)i += 1;
+                    }
+                    else if(i == 1) {
+                        emergency_call(emergency_num1);
+                        if (emergency_num2.length() != 0)i += 1;
+                        else i = 0;
+                    }
+                    else if(i == 2) {
+                        emergency_call(emergency_num2);
+                        i = 0;
+                    }
                 }
-
             }
         });
 
@@ -83,55 +103,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ActivityCompat.requestPermissions(HomeActivity.this, new String[] {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
-    }
-
-
-
-    public void emergency_call(String emergency_num){
-        Intent forcall = new Intent();
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED) {
-            forcall.setAction(Intent.ACTION_CALL);
-            forcall.setData(Uri.parse("tel:"+emergency_num));
-            startActivity(forcall);
-        }else{
-            ActivityCompat.requestPermissions(this,new String []{
-                    Manifest.permission.CALL_PHONE},1);
-            forcall.setAction(Intent.ACTION_CALL);
-            forcall.setData(Uri.parse("tel:"+emergency_num));
-            startActivity(forcall);
-        }
-    }
-
-
-
-
-
-    private void getCurrentLocation() {
-        // 取得最佳的定位提供者
-        Criteria criteria = new Criteria();
-        String best = manager.getBestProvider(criteria, true);
-        // 更新位置頻率的條件
-        int minTime = 600000; // 毫秒
-
-        float minDistance = 200; // 公尺
-        if (best != null) { // 取得快取的最後位置,如果有的話
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                return;
-            }
-            currentLocation = manager.getLastKnownLocation(best);
-            manager.requestLocationUpdates(best, minTime, minDistance, listener);
-        } else { // 取得快取的最後位置,如果有的話
-            currentLocation = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, listener);
-        }
-        updatePosition(); // 更新位置
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         getCurrentLocation();
 
         Calendar NotificationTime = Calendar.getInstance();
@@ -163,6 +134,48 @@ public class HomeActivity extends AppCompatActivity {
         WorkManager
                 .getInstance()
                 .enqueue(workRequest);
+
+        ActivityCompat.requestPermissions(HomeActivity.this, new String[] {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
+    }
+
+
+
+    public void emergency_call(String emergency_num){
+        Intent forcall = new Intent();
+        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.CALL_PHONE)== PackageManager.PERMISSION_GRANTED) {
+            forcall.setAction(Intent.ACTION_CALL);
+            forcall.setData(Uri.parse("tel:"+emergency_num));
+            startActivity(forcall);
+        }else{
+            ActivityCompat.requestPermissions(this,new String []{
+                    Manifest.permission.CALL_PHONE},PackageManager.PERMISSION_GRANTED);
+        }
+    }
+
+
+
+
+
+    private void getCurrentLocation() {
+        // 取得最佳的定位提供者
+        Criteria criteria = new Criteria();
+        String best = manager.getBestProvider(criteria, true);
+        // 更新位置頻率的條件
+        int minTime = 600000; // 毫秒
+
+        float minDistance = 200; // 公尺
+        if (best != null) { // 取得快取的最後位置,如果有的話
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
+            currentLocation = manager.getLastKnownLocation(best);
+            manager.requestLocationUpdates(best, minTime, minDistance, listener);
+        } else { // 取得快取的最後位置,如果有的話
+            currentLocation = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, listener);
+        }
+        updatePosition(); // 更新位置
     }
 
     @Override
@@ -243,7 +256,7 @@ public class HomeActivity extends AppCompatActivity {
             float distance = location.distanceTo(dest);
             //Toast.makeText(this, "距離: " + distance + "公尺",Toast.LENGTH_SHORT).show();
             Log.d("Track Location", "distance: " + distance);
-            // 檢查距離是否小於20公尺, 小於不用存
+            // 檢查距離是否小於200公尺, 小於不用存
             if (distance < 200) isSave = false;
         }
         if (isSave) { // 記錄座標

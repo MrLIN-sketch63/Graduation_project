@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">健康看護</string>
+    <string name="app_name">樂齡生活助手</string>
     <string name="personinfo">個人信息</string>
     <string name="account">賬號 ：</string>
     <string name="logo">圖標</string>
@@ -38,11 +38,11 @@
     <string name="CurrentTime">目前時間</string>
     <string name="SystolicPressure">收縮壓：</string>
     <string name="DiastolicPressure">舒張壓：</string>
-    <string name="HeartBeat">心跳（bpm）：</string>
+    <string name="HeartBeat">心跳(bpm)：</string>
     <string name="GlucoseAC">飯前血糖：</string>
     <string name="GlucosePC">飯後血糖：</string>
     <string name="add">添加</string>
-    <string name="welcome">歡迎使用健康看護</string>
+    <string name="welcome">歡迎使用樂齡生活助手</string>
     <string name="map">地圖</string>
     <string name="Medicine">吃藥提醒</string>
     <string name="Weather">天氣</string>
@@ -102,10 +102,18 @@
     <string name="context">聯繫我們</string>
     <string name="today">今天的溫度是</string>
     <string name="logout_title">登出</string>
-    <string name="logout_content">你確定要登出嗎？</string>
+    <string name="logout_content">你確定要退出嗎？</string>
     <string name="about_us">關於我們</string>
     <string name="privacy">隱私</string>
-    <string name="welcome_nav">健康看護</string>
+    <string name="welcome_nav">樂齡生活助手</string>
     <string name="required">必填</string>
     <string name="optional">選填</string>
+    <string name="register_success">註冊成功！</string>
+    <string name="register_fail">註冊失敗！</string>
+    <string name="user_exit">用戶已存在！請登錄！</string>
+    <string name="password_match">密碼不匹配！</string>
+    <string name="insert_success">資料加入成功！</string>
+    <string name="insert_fail">資料加入失敗！</string>
+    <string name="login_ps_success">請輸入正確的賬號密碼！</string>
+    <string name="login_ps_fail">身份驗證失敗！</string>
 </resources>

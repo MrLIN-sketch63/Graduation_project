@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/add_info_bg"
     tools:context=".Add_health_info">
 
     <LinearLayout
@@ -156,7 +157,7 @@
         android:layout_gravity="center"
         android:text="@string/add"
         android:textStyle="bold"
-        android:textSize="30dp"
-        android:layout_marginTop="30dp"/>
+        android:textSize="35dp"
+        android:layout_marginTop="40dp"/>
 
 </LinearLayout>

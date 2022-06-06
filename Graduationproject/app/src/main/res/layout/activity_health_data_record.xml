@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Health_data_record">
+    tools:context=".Health_data_record"
+    android:background="@drawable/add_info_bg">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_button"
@@ -27,14 +28,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="50dp">
 
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <ImageButton
         android:id="@+id/btn_delete_healthdata"
-        android:background="@drawable/bg_btn"
+        android:background="#00ffffff"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
@@ -48,9 +50,10 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/bg_btn"
+        android:background="#00ffffff"
         app:layout_constraintBottom_toBottomOf="@+id/btn_delete_healthdata"
         app:layout_constraintEnd_toStartOf="@+id/btn_delete_healthdata"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_line_chart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

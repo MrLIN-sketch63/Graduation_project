@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health Care</string>
+    <string name="app_name">Elder life assistant</string>
     <string name="personinfo">Personal Info</string>
     <string name="account">UserName：</string>
     <string name="logo">logo</string>
@@ -54,8 +54,8 @@
     <string name="GlucoseAC">Glucose(AC)：</string>
     <string name="GlucosePC">Glucose(PC)：</string>
     <string name="add">add</string>
-    <string name="welcome">Welcome to Health Care</string>
-    <string name="welcome_nav">Health Care</string>
+    <string name="welcome">Welcome to Elder assistant</string>
+    <string name="welcome_nav">Elder assistant</string>
     <string name="map">Map</string>
     <string name="Medicine">Medicine Clock</string>
     <string name="Weather">Weather</string>
@@ -120,4 +120,13 @@
     <string name="privacy">Privacy </string>
     <string name="required">Required </string>
     <string name="optional">Optional </string>
+    <string name="register_success">Registration Successful!</string>
+    <string name="register_fail">Registration Failed!</string>
+    <string name="user_exit">User already Exists! Please Sign In!</string>
+    <string name="password_match">Password not Matching!</string>
+    <string name="insert_success">Insert Successful! </string>
+    <string name="insert_fail">Insert Failed </string>
+    <string name="login_ps_success">Please enter the Credentials </string>
+    <string name="login_ps_fail">Invalid Credentials </string>
+
 </resources>
