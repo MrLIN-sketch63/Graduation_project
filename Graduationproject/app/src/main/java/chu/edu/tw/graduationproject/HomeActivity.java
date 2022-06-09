@@ -75,8 +75,6 @@ public class HomeActivity extends AppCompatActivity {
                     String emergency_num = cursor.getString(5);
                     String emergency_num1 = cursor.getString(6);
                     String emergency_num2 = cursor.getString(7);
-                    txttest = findViewById(R.id.textView234);
-                    txttest.setText(emergency_num2);
                     if(i == 0) {
                         emergency_call(emergency_num);
                         if (emergency_num1.length() != 0)i += 1;
