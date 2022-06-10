@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="@drawable/bg_3"
+    android:background="@color/light_bLue"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
 
         android:adjustViewBounds="true"
-        android:src="@drawable/logo" />
+        android:src="@drawable/app_icon" />
 
     <EditText
         android:id="@+id/usernameLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/UserName"
         android:textSize="25dp" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Auto_login"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="@string/Register"
         android:textAllCaps="false"
         android:textSize="25sp" />
@@ -64,7 +64,7 @@
         android:layout_below="@id/btnLogin"
         android:layout_marginTop="5dp"
         android:text="@string/Remember"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="@android:color/black"
         android:textSize="20dp" />
 
     <CheckBox
@@ -74,7 +74,7 @@
         android:layout_below="@id/RememberPass"
         android:layout_marginTop="5dp"
         android:text="@string/AutoLogin"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="@android:color/black"
         android:textSize="20dp" />
 
 </RelativeLayout>

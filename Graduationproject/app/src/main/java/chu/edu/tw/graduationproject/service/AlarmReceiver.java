@@ -62,7 +62,8 @@ public final class AlarmReceiver extends BroadcastReceiver {
 
         Intent repeating_Intent = new Intent(context, MainFragment.class);
         repeating_Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, repeating_Intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, repeating_Intent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
         builder.setSmallIcon(R.drawable.ic_alarm_white_24dp);
         builder.setColor(ContextCompat.getColor(context, R.color.accent));

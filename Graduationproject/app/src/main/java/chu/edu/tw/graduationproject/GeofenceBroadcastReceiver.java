@@ -43,18 +43,18 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver{
 
         switch (transitionType) {
             case Geofence.GEOFENCE_TRANSITION_ENTER:
-                if(Locale.getDefault().getLanguage() == "zh"){
-                    String message = "使用者進入柵欄區域";
-                    Cursor cursor = db.getdata();
-                    if(cursor.moveToFirst()) {
-                        String number = cursor.getString(6);
-                        SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage(number, null, message, null, null);
-                    }
-                    notificationHelper.sendHighPriorityNotification("使用者進入柵欄區域", "", MapsActivity.class);
-                    break;
+                //if(Locale.getDefault().getLanguage() == "zh"){
+                String message = "使用者進入柵欄區域";
+                Cursor cursor = db.getdata();
+                if(cursor.moveToFirst()) {
+                    String number = cursor.getString(6);
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(number, null, message, null, null);
                 }
-                else{
+                notificationHelper.sendHighPriorityNotification("使用者進入柵欄區域", "", MapsActivity.class);
+                break;
+               // }
+                /*else{
                     String message = "The user is entering the fenced area" ;
                     Cursor cursor = db.getdata();
                     if(cursor.moveToFirst()) {
@@ -64,33 +64,32 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver{
                     }
                     notificationHelper.sendHighPriorityNotification("The user is entering the fenced area", "", MapsActivity.class);
                     break;
-                }
+                }*/
 
 
 
             case Geofence.GEOFENCE_TRANSITION_DWELL:
-                if(Locale.getDefault().getLanguage() == "zh"){
-                    notificationHelper.sendHighPriorityNotification("使用者正在柵欄區域中", "", MapsActivity.class);
-                }
-                else{
+                //if(Locale.getDefault().getLanguage() == "zh"){
+                notificationHelper.sendHighPriorityNotification("使用者正在柵欄區域中", "", MapsActivity.class);
+                //}
+                /*else{
                     notificationHelper.sendHighPriorityNotification("The user is in the fence area now", "", MapsActivity.class);
-                }
-
+                }*/
                 break;
 
             case Geofence.GEOFENCE_TRANSITION_EXIT:
-                if(Locale.getDefault().getLanguage() == "zh"){
-                    String message1 = "使用者離開柵欄區域";
-                    Cursor cursor1 = db.getdata();
-                    if(cursor1.moveToFirst()) {
-                        String number = cursor1.getString(6);
-                        SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage(number, null, message1, null, null);
-                    }
-                    notificationHelper.sendHighPriorityNotification("使用者離開柵欄區域", "", MapsActivity.class);
-                    break;
+                //if(Locale.getDefault().getLanguage() == "zh"){
+                String message1 = "使用者離開柵欄區域";
+                Cursor cursor1 = db.getdata();
+                if(cursor1.moveToFirst()) {
+                    String number = cursor1.getString(6);
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(number, null, message1, null, null);
                 }
-                else{
+                notificationHelper.sendHighPriorityNotification("使用者離開柵欄區域", "", MapsActivity.class);
+                break;
+                //}
+                /*else{
                     String message1 = "The user has left the fenced area";
                     Cursor cursor1 = db.getdata();
                     if(cursor1.moveToFirst()) {
@@ -100,9 +99,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver{
                     }
                     notificationHelper.sendHighPriorityNotification("The user has left the fenced area", "", MapsActivity.class);
                     break;
-                }
-
-
+                }*/
 
         }
     }
