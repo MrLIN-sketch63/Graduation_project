@@ -59,26 +59,17 @@ public final class AlarmReceiver extends BroadcastReceiver {
 
         createNotificationChannel(context);
 
-
-        Intent repeating_Intent = new Intent(context, MainFragment.class);
-        repeating_Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, repeating_Intent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
-        builder.setSmallIcon(R.drawable.ic_alarm_white_24dp);
-        builder.setColor(ContextCompat.getColor(context, R.color.accent));
-        builder.setContentTitle(context.getString(R.string.app_name));
+        builder.setSmallIcon(R.drawable.app_icon);
+        builder.setColor(ContextCompat.getColor(context, R.color.blue));
+        builder.setContentTitle(context.getString(R.string.medicine_alarm));
         builder.setContentText(alarm.getLabel());
         builder.setTicker(alarm.getLabel());
-       // builder.setVibrate(new long[] {1000,500,1000,500,1000,500});
+        builder.setVibrate(new long[] {1000,500,1000,500,1000,500});
         builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
-    //    builder.setContentIntent(launchAlarmLandingPage(context, alarm));
-        builder.setContentIntent(pendingIntent);
+        builder.setContentIntent(launchAlarmLandingPage(context, alarm));
         builder.setAutoCancel(true);
-        builder.setWhen(System.currentTimeMillis());
-        builder.setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND);
         builder.setPriority(Notification.PRIORITY_HIGH);
-
 
         manager.notify(id, builder.build());
 

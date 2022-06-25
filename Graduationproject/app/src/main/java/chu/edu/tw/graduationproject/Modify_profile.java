@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Modify_profile extends AppCompatActivity {
     TextView nickname;
-    EditText fullname, age, gender, email, emergency_phone1, emergency_phone2, emergency_phone3, address;
+    EditText fullname, age, gender, email, address, emergency_phone1, emergency_phone2, emergency_phone3;
     Button save;
     String nickname_edit, fullname_edit, age_edit, gender_edit, email_edit, emergency_phone1_edit, emergency_phone2_edit, emergency_phone3_edit, address_edit;
     DBHelper myDB;
@@ -31,10 +31,11 @@ public class Modify_profile extends AppCompatActivity {
         age = findViewById(R.id.age);
         gender = findViewById(R.id.gender);
         email = findViewById(R.id.email);
+        address = findViewById(R.id.address);
         emergency_phone1 = findViewById(R.id.emergency_phone1);
         emergency_phone2 = findViewById(R.id.emergency_phone2);
         emergency_phone3 = findViewById(R.id.emergency_phone3);
-        address = findViewById(R.id.address);
+
 
         save = findViewById(R.id.btn_save);
         myDB = new DBHelper(this);
@@ -49,12 +50,13 @@ public class Modify_profile extends AppCompatActivity {
                 String ageTXT = age.getText().toString();
                 String genderTXT = gender.getText().toString();
                 String emailTXT = email.getText().toString();
+                String addressTXT = address.getText().toString();
                 String emergency_phone1TXT = emergency_phone1.getText().toString();
                 String emergency_phone2TXT = emergency_phone2.getText().toString();
                 String emergency_phone3TXT = emergency_phone3.getText().toString();
-                String addressTXT = address.getText().toString();
-                Boolean checkUpdateData = myDB.UpdateData(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,
-                        emergency_phone1TXT, emergency_phone2TXT, emergency_phone3TXT, addressTXT);
+
+                Boolean checkUpdateData = myDB.UpdateData(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,addressTXT,
+                        emergency_phone1TXT, emergency_phone2TXT, emergency_phone3TXT);
                 if(checkUpdateData == true){
                     Toast.makeText(Modify_profile.this, "Update Successful", Toast.LENGTH_SHORT).show();
 

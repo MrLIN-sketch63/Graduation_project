@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class User extends AppCompatActivity {
     DrawerLayout drawerLayout;
     DBHelper myDB;
-    TextView nickname, fullname, age, gender, email, emergency_phone1, emergency_phone2, emergency_phone3, address;
+    TextView nickname, fullname, age, gender, email, address, emergency_phone1, emergency_phone2, emergency_phone3;
 
 
     @Override
@@ -30,11 +30,10 @@ public class User extends AppCompatActivity {
         age = findViewById(R.id.Tx_3);
         gender = findViewById(R.id.Tx_4);
         email = findViewById(R.id.Tx_5);
-        emergency_phone1 = findViewById(R.id.Tx_6);
-        emergency_phone2 = findViewById(R.id.Tx_7);
-        emergency_phone3 = findViewById(R.id.Tx_8);
-        address = findViewById(R.id.Tx_9);
-
+        address = findViewById(R.id.Tx_6);
+        emergency_phone1 = findViewById(R.id.Tx_7);
+        emergency_phone2 = findViewById(R.id.Tx_8);
+        emergency_phone3 = findViewById(R.id.Tx_9);
 
     }
 
@@ -80,10 +79,10 @@ public class User extends AppCompatActivity {
         String ageTXT = age.getText().toString();
         String genderTXT = gender.getText().toString();
         String emailTXT = email.getText().toString();
+        String addressTXT = address.getText().toString();
         String emergency_phone1TXT = emergency_phone1.getText().toString();
         String emergency_phone2TXT = emergency_phone2.getText().toString();
         String emergency_phone3TXT = emergency_phone3.getText().toString();
-        String addressTXT = address.getText().toString();
 
         Intent i = new Intent(this, Modify_profile.class);
         i.putExtra("nickname", nicknameTXT);
@@ -91,10 +90,10 @@ public class User extends AppCompatActivity {
         i.putExtra("age", ageTXT);
         i.putExtra("gender", genderTXT);
         i.putExtra("email", emailTXT);
+        i.putExtra("address", addressTXT);
         i.putExtra("emergency1", emergency_phone1TXT);
         i.putExtra("emergency2", emergency_phone2TXT);
         i.putExtra("emergency3", emergency_phone3TXT);
-        i.putExtra("address", addressTXT);
         startActivity(i);
     }
 

@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="Jack"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="Steve"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -157,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="25"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
             </LinearLayout>
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="male"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
             </LinearLayout>
@@ -240,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="123456@gmail.com"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
 
             </LinearLayout>
@@ -277,12 +277,12 @@
                     android:layout_marginLeft="5dp"/>
 
                 <TextView
-                    android:id="@+id/Tx_9"
+                    android:id="@+id/Tx_6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="WuFu Road"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -317,12 +317,12 @@
                     android:layout_marginLeft="5dp"/>
 
                 <TextView
-                    android:id="@+id/Tx_6"
+                    android:id="@+id/Tx_7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="123456"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -357,12 +357,12 @@
                     android:layout_marginLeft="5dp"/>
 
                 <TextView
-                    android:id="@+id/Tx_7"
+                    android:id="@+id/Tx_8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="123456"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -397,12 +397,12 @@
                     android:layout_marginLeft="5dp"/>
 
                 <TextView
-                    android:id="@+id/Tx_8"
+                    android:id="@+id/Tx_9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="123456"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/black"
                     android:textSize="18dp" />
             </LinearLayout>
 

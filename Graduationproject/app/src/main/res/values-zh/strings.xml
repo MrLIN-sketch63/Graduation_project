@@ -116,4 +116,5 @@
     <string name="insert_fail">資料加入失敗！</string>
     <string name="login_ps_success">請輸入正確的賬號密碼！</string>
     <string name="login_ps_fail">身份驗證失敗！</string>
+    <string name="medicine_alarm">吃藥提醒</string>
 </resources>

@@ -50,7 +50,7 @@ public class NotificationHelper extends ContextWrapper {
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
 //                .setContentTitle(title)
 //                .setContentText(body)
-                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setSmallIcon(R.drawable.app_icon)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setStyle(new NotificationCompat.BigTextStyle().setSummaryText("summary").setBigContentTitle(title).bigText(body))
                 .setContentIntent(pendingIntent)

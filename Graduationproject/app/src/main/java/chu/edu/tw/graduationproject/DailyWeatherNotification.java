@@ -101,7 +101,7 @@ public class DailyWeatherNotification extends Worker {
             Intent intent = new Intent(mcontext, WeatherBroadcast.class);
             intent.putExtra("temp",temp);
             intent.putExtra("bitmap",bitmap);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 2, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             AlarmManager alarmManager = (AlarmManager) mcontext.getSystemService(ALARM_SERVICE);
             alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);

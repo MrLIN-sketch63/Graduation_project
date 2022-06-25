@@ -22,8 +22,8 @@ public class About_us extends AppCompatActivity {
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.drawable.logo)
-                .setDescription("感谢使用健康看護")
+                .setImage(R.drawable.icon_2)
+                .setDescription("感谢使用樂齡生活助手")
                 .addItem(new Element().setTitle("Version 1.0"))
                 .addGroup("意見與反饋")
                 .addEmail("linxiansen623@gmail.com")

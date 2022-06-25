@@ -44,10 +44,11 @@ public class Userprofile_initialize extends AppCompatActivity {
                 String ageTXT = age.getText().toString();
                 String genderTXT = gender.getText().toString();
                 String emailTXT = email.getText().toString();
+                String addressTXT = address.getText().toString();
                 String emergency_phone1TXT = emergency_phone1.getText().toString();
                 String emergency_phone2TXT = emergency_phone2.getText().toString();
                 String emergency_phone3TXT = emergency_phone3.getText().toString();
-                String addressTXT = address.getText().toString();
+
 
                 Boolean checkInsertData = myDB.insert_userprofile_Data(nicknameTXT, fullnameTXT, ageTXT, genderTXT, emailTXT,
                         emergency_phone1TXT, emergency_phone2TXT,emergency_phone3TXT, addressTXT);

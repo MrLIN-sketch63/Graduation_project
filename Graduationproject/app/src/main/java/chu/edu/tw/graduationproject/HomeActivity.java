@@ -37,7 +37,7 @@ import chu.edu.tw.graduationproject.ui.MainActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private final int MAX_RECORDS = 10;
+    private final int MAX_RECORDS = 50;
     private LocationManager manager;
     private Location currentLocation;
     private int index = 0, count = 0;
@@ -159,9 +159,9 @@ public class HomeActivity extends AppCompatActivity {
         Criteria criteria = new Criteria();
         String best = manager.getBestProvider(criteria, true);
         // 更新位置頻率的條件
-        int minTime = 600000; // 毫秒
+        int minTime = 60000; // 毫秒
 
-        float minDistance = 200; // 公尺
+        float minDistance = 100; // 公尺
         if (best != null) { // 取得快取的最後位置,如果有的話
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                     ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -174,6 +174,12 @@ public class HomeActivity extends AppCompatActivity {
             manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, minTime, minDistance, listener);
         }
         updatePosition(); // 更新位置
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getCurrentLocation();
     }
 
     @Override

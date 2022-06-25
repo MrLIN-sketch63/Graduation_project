@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,9 +39,10 @@ public class WeatherBroadcast extends BroadcastReceiver {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, repeating_Intent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "WeatherNotification")
                 .setContentIntent(pendingIntent)
-                .setSmallIcon(R.drawable.sunny)
+                .setSmallIcon(R.drawable.app_icon)
+                .setColor(ContextCompat.getColor(context, R.color.light_bLue))
                 .setLargeIcon(bitmap)
-                .setContentText(R.string.today + temp + "℃")
+                .setContentText("今天的天氣是" + temp + "℃")
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setAutoCancel(true);
 

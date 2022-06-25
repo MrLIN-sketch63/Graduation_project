@@ -128,5 +128,5 @@
     <string name="insert_fail">Insert Failed </string>
     <string name="login_ps_success">Please enter the Credentials </string>
     <string name="login_ps_fail">Invalid Credentials </string>
-
+    <string name="medicine_alarm"> Medicine </string>
 </resources>

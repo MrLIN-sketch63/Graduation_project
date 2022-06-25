@@ -55,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 取得Intent物件附加的陣列
         Lats = getIntent().getDoubleArrayExtra("GPSLATITUDE");
         Lngs = getIntent().getDoubleArrayExtra("GPSLONGITUDE");
-        max_index = getIntent().getIntExtra("MAX_INDEX", 20);
+        max_index = getIntent().getIntExtra("MAX_INDEX", 50);
 
         setUpMapIfNeeded(); // 初始Google Map
 
@@ -203,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void addGeofence(LatLng latLng, float radius) {
 
         Geofence geofence = geofenceHelper.getGeofence(GEOFENCE_ID, latLng, radius, Geofence.GEOFENCE_TRANSITION_ENTER
-                | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT);
+                | Geofence.GEOFENCE_TRANSITION_EXIT);
 
         GeofencingRequest geofencingRequest = geofenceHelper.getGeofencingRequest(geofence);
         PendingIntent pendingIntent = geofenceHelper.getPendingIntent();

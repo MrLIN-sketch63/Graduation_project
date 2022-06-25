@@ -107,7 +107,7 @@ public class Data_lineChart extends AppCompatActivity {
         yAxis.setAxisMaximum(180f);
         yAxis.setAxisMinimum(60f);
         //yAxis.setDrawLabels(false);
-        LimitLine yLimitLine = new LimitLine(160f,"臨界值");
+        LimitLine yLimitLine = new LimitLine(140f,"臨界值");
         yAxis.addLimitLine(yLimitLine);
         yLimitLine.setLineColor(Color.rgb(178,34,34));
 
@@ -117,10 +117,10 @@ public class Data_lineChart extends AppCompatActivity {
         xAxis1.setGranularity(1f);
 
         YAxis yAxis1 = lineChart1.getAxisLeft();
-        yAxis1.setAxisMaximum(120f);
-        yAxis1.setAxisMinimum(0f);
+        yAxis1.setAxisMaximum(180f);
+        yAxis1.setAxisMinimum(40f);
         //yAxis.setDrawLabels(false);
-        LimitLine yLimitLine1 = new LimitLine(100f,"臨界值");
+        LimitLine yLimitLine1 = new LimitLine(140f,"臨界值");
         yAxis1.addLimitLine(yLimitLine1);
         yLimitLine.setLineColor(Color.rgb(178,34,34));
 

@@ -21,8 +21,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase myDB) {
         myDB.execSQL("create Table users(username Text primary key, password Text)");
         myDB.execSQL("create Table userprofile(nickname TEXT primary key, " +
-                "fullname TEXT not null, age TEXT not null, gender TEXT not null, email TEXT not null," +
-                " emergency_phone1 TEXT not null, emergency_phone2 TEXT not null, emergency_phone3 TEXT not null, address TEXT not null)");
+                "fullname TEXT not null, age TEXT not null, gender TEXT not null, email TEXT not null, address TEXT not null ," +
+                " emergency_phone1 TEXT not null, emergency_phone2 TEXT not null, emergency_phone3 TEXT not null)");
         myDB.execSQL("create Table healthdata(c_time TEXT primary key, low_pressure Integer not null, high_pressure Integer not null, " +
                 "heartbeat Integer not null, before_eat Integer not null, after_eat Integer not null)");
     }
@@ -76,18 +76,19 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public Boolean UpdateData(String nickname, String fullname, String age, String gender, String email,
-                              String emergency_phone1, String emergency_phone2, String emergency_phone3,String address){
+    public Boolean UpdateData(String nickname, String fullname, String age, String gender, String email,String address,
+                              String emergency_phone1, String emergency_phone2, String emergency_phone3){
         SQLiteDatabase myDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("fullname", fullname);
         contentValues.put("age", age);
         contentValues.put("gender", gender);
         contentValues.put("email", email);
+        contentValues.put("address", address);
         contentValues.put("emergency_phone1", emergency_phone1);
         contentValues.put("emergency_phone2", emergency_phone2);
         contentValues.put("emergency_phone3", emergency_phone3);
-        contentValues.put("address", address);
+
         Cursor cursor = myDB.rawQuery("Select * from userprofile where nickname = ?", new String[] {nickname});
         if(cursor.getCount() > 0) {
             long result = myDB.update("userprofile", contentValues, "nickname=?", new String[] {nickname});
